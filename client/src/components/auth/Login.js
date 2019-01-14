@@ -23,7 +23,7 @@ class Login extends Component {
       password: this.state.password,
     };
 
-    console.log(user)
+    console.log("user", user);
   }
 
   render() {
