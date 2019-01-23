@@ -28,7 +28,7 @@ const TextFieldGroup = ({
        />
        {info && <small className="form-text text-muted">{info}</small>}
        {error && (
-         <div className="invalid-feedvback">{error}</div>
+         <div className="invalid-feedback">{error}</div>
        )}
       </div>
     )
