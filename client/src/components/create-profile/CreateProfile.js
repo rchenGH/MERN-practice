@@ -83,7 +83,55 @@ class CreateProfile extends Component {
                                     options={options}
                                     errors={errors.status}
                                     info="Give us an idea of where you are at in your career."
-                                />                    
+                                />
+                                <TextFieldGroup 
+                                    placeholder="Company"
+                                    name="company"
+                                    value={this.state.company}
+                                    onChange={this.onChange}
+                                    errors={errors.company}
+                                    info="Could be your own company or one for which you have worked."
+                                />
+                                <TextFieldGroup 
+                                    placeholder="Website"
+                                    name="website"
+                                    value={this.state.website}
+                                    onChange={this.onChange}
+                                    errors={errors.website}
+                                    info="Could be your own website or a company."
+                                />
+                                <TextFieldGroup 
+                                    placeholder="Location"
+                                    name="location"
+                                    value={this.state.location}
+                                    onChange={this.onChange}
+                                    errors={errors.location}
+                                    info="City or city & state suggested (eg. Vancouver, BC)."
+                                />
+                                <TextFieldGroup 
+                                    placeholder="* Skills"
+                                    name="skills"
+                                    value={this.state.skills}
+                                    onChange={this.onChange}
+                                    errors={errors.skills}
+                                    info="Please use comma separated values (eg. HTML, CSS, JavaScript, PHP)."
+                                />
+                                <TextFieldGroup 
+                                    placeholder="Github Username"
+                                    name="githubusername"
+                                    value={this.state.githubusername}
+                                    onChange={this.onChange}
+                                    errors={errors.githubusername}
+                                    info="If you want your latest repos and a Github link, include your username"
+                                />
+                                <TextAreaFieldGroup 
+                                    placeholder="Short Bio"
+                                    name="bio"
+                                    value={this.state.bio}
+                                    onChange={this.onChange}
+                                    errors={errors.bio}
+                                    info="Tell us a little about yourself"
+                                />
                             </form>
                         </div>
                     </div>
