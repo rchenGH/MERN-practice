@@ -10,11 +10,11 @@ const SelectListGroup = ({
     onChange,
     options
 }) => {
-    const selectOptions = options.map(option => {
+    const selectOptions = options.map(option => (
         <option key={option.label} value={option.value}>
             {option.label}
         </option>
-    })
+    ));
     return (
         <div className="form-group">
             <select 
