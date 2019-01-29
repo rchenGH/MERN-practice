@@ -53,11 +53,11 @@ class CreateProfile extends Component {
             profile.githubusername = !isEmpty(profile.githubusername) ? profile.githubusername : '';
             profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
             profile.social = !isEmpty(profile.social) ? profile.social : {};
-            profile.social.twitter = !isEmpty(profile.social.twitter) ? profile.social.twitter : '';
-            profile.social.facebook = !isEmpty(profile.social.facebook) ? profile.social.facebook : '';
-            profile.social.linkedin = !isEmpty(profile.social.linkedin) ? profile.social.linkedin : '';
-            profile.social.youtube = !isEmpty(profile.social.youtube) ? profile.social.youtube : '';
-            profile.social.instagram = !isEmpty(profile.social.instagram) ? profile.social.instagram : '';
+            profile.twitter = !isEmpty(profile.social.twitter) ? profile.social.twitter : '';
+            profile.facebook = !isEmpty(profile.social.facebook) ? profile.social.facebook : '';
+            profile.linkedin = !isEmpty(profile.social.linkedin) ? profile.social.linkedin : '';
+            profile.youtube = !isEmpty(profile.social.youtube) ? profile.social.youtube : '';
+            profile.instagram = !isEmpty(profile.social.instagram) ? profile.social.instagram : '';
 
             // Set component fields state
             this.setState({
@@ -66,7 +66,7 @@ class CreateProfile extends Component {
                 website: profile.website,
                 location: profile.location,
                 status: profile.status,
-                skills: profile.skills,
+                skills: skillsCSV,
                 githubusername: profile.githubusername,
                 bio: profile.bio,
                 twitter: profile.twitter,
