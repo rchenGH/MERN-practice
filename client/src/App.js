@@ -18,8 +18,10 @@ import Dashboard from './components/dashboard/Dashboard'
 import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import AddExperience from './components/add-credentials/AddExperience';
-import './App.css';
 import AddEducation from './components/add-credentials/AddEducation';
+import Profiles from './components/profiles/Profiles';
+import './App.css';
+
 
 // will retain state after refresh
 // Check for token
@@ -54,6 +56,7 @@ class App extends Component {
               <div className="container">
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/profiles" component={Profiles} />
               {/* prevents redirect issues */}
               <Switch>
                 <PrivateRoute exact path='/dashboard' component={Dashboard} />
