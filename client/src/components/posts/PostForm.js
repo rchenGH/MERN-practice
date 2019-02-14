@@ -13,7 +13,19 @@ class PostForm extends Component {
             errors: {}
         }
     }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        console.log('submit')
+    }
+
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value});
+    }
+
     render() {
+        const {errors } = this.state;
+        
         return (
             <div class="post-form mb-3">
                 <div class="card card-info">
@@ -21,9 +33,15 @@ class PostForm extends Component {
                         Say Somthing...
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form onSubmit={this.onSubmit}>
                             <div class="form-group">
-                                <textarea class="form-control form-control-lg" placeholder="Create a post"></textarea>
+                                <TextAreaFieldGroup 
+                                    placeholder="Create a post"
+                                    name="text"
+                                    value={this.state.text}
+                                    onChange={this.onChange}
+                                    error={errors.text}
+                                />
                             </div>
                             <button type="submit" class="btn btn-dark">Submit</button>
                         </form>
