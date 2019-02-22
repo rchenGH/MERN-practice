@@ -41,14 +41,14 @@ class PostForm extends Component {
         const {errors } = this.state;
         
         return (
-            <div class="post-form mb-3">
-                <div class="card card-info">
-                    <div class="card-header bg-info text-white">
+            <div className="post-form mb-3">
+                <div className="card card-info">
+                    <div className="card-header bg-info text-white">
                         Say Somthing...
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
                         <form onSubmit={this.onSubmit}>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <TextAreaFieldGroup 
                                     placeholder="Create a post"
                                     name="text"
@@ -57,7 +57,7 @@ class PostForm extends Component {
                                     error={errors.text}
                                 />
                             </div>
-                            <button type="submit" class="btn btn-dark">Submit</button>
+                            <button type="submit" className="btn btn-dark">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ class PostForm extends Component {
 }
 
 PostForm.propTypes = {
-    addPOst: PropTypes.func.isRequired,
+    addPost: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
 }
