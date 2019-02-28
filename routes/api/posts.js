@@ -107,13 +107,6 @@ router.post('/like/:id', passport.authenticate('jwt', { session: false }), (req,
 // @desc    Unlike post
 // @access  Private
 router.post('/unlike/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
-    const { errors, isValid } = validatePostInput(req.body);
-
-    // Check Validation
-    if (!isValid) {
-        // If any errors, send 400 with errors object
-        return res.status(400).json(errors)
-    }
 
     Profile.findOne({ user: req.user.id })
         .then(profile => {
